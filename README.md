@@ -12,23 +12,25 @@ This process will install the necessary libries to run the application.
 ## Testing the endpoints 
 Below are the end points to perform the basic crud operations: 
 
-```create: localhost:8000/api/create/```
+```url: https://hndx-stagetwo.onrender.com```
+
+```create: https://hndx-stagetwo.onrender.com/api/create/```
 
 This is to create a person. This endpoint will request for the name and save it to the database.
 
-```get: localhost:8000/api/get/```
+```get: https://hndx-stagetwo.onrender.com/api/get/```
 
 This will get all the data in the database
 
-```getById: localhost:8000/api/byId/<id>```
+```getById: https://hndx-stagetwo.onrender.com/api/byId/<id>```
 
 This will get the data with the provided id 
 
-```updateById: localhost:8000/api/byId/<id>```
+```updateById: https://hndx-stagetwo.onrender.com/api/byId/<id>```
 
 This will update the data using the provided id 
 
-```deleteById: localhost:8000/api/byId/<id>```
+```deleteById: https://hndx-stagetwo.onrender.com/api/byId/<id>```
 
 This endpoint will delete the data using the provided id
 
