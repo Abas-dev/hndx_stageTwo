@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-l#3^sh&4$gtc+#_um$7ssvh265-^ilxh#&c3$x(7x^99ny%xcx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['hndx-stagetwo.onrender.com']
+ALLOWED_HOSTS = ['hndx-stagetwo.onrender.com','localhost']
 
 
 # Application definition
@@ -79,13 +80,16 @@ WSGI_APPLICATION = 'hngxproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+DATABASES = { 
+    'default': dj_database_url.parse('postgres://stagetwotask_ikqg_user:cOcdUNhvQYzt2fHTOnDwR2Ddx7w7NGiR@dpg-ck07pu021fec73dk4jk0-a.oregon-postgres.render.com/stagetwotask_ikqg')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
