@@ -6,5 +6,5 @@ app_name = 'api'
 urlpatterns = [
     path('',views.CreatePerson.as_view(),name='create'),
     path('get/',views.GetAllPerson.as_view(),name='getPerson'),
-    path('<int:pk>/',views.GetUpdateDeletePerson.as_view(),name='byId')
+    path('<int:pk>',views.GetUpdateDeletePerson.as_view(),name='byId')
 ]
