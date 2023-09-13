@@ -32,27 +32,8 @@ This process will install the necessary libries to run the application.
     "name": "Mark Essien"
 }
 ```
-### 2. Retrieve all in database
 
-**Endpoint:** `GET /api/get/`
-
-**Response:**
-```json
-{
-    "id": 1,
-    "name": "Mark Essien"
-},
-{
-    "id": 1,
-    "name": "Jimmy James"
-},
-{
-    "id": 1,
-    "name": "Top Boy"
-}
-```
-
-### 3. Retrieve a Person
+### 2. Retrieve a Person
 
 **Endpoint:** `GET /api/{user_id}`
 
@@ -64,7 +45,7 @@ This process will install the necessary libries to run the application.
 }
 ```
 
-### 4. Update a Person
+### 3. Update a Person
 
 **Endpoint:** `PUT /api/{user_id}`
 
@@ -83,7 +64,7 @@ This process will install the necessary libries to run the application.
 }
 ```
 
-### 5. Delete a Person
+### 4. Delete a Person
 
 **Endpoint:** `DELETE /api/{user_id}`
 

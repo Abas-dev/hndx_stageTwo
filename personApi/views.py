@@ -25,6 +25,8 @@ class CreatePerson(GenericAPIView):
             return Response(data=response,status=status.HTTP_201_CREATED)
         return Response(data={'message':serializer.errors},status=status.HTTP_400_BAD_REQUEST)
 
+
+
 class GetUpdateDeletePerson(GenericAPIView):
     serializer_class = PersonSerializer
 
