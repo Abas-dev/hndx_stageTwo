@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404
 from .models import Person
 from .serializers import PersonSerializer
 
+
 class CreatePerson(GenericAPIView):
     serializer_class = PersonSerializer
 
@@ -53,7 +54,7 @@ class GetUpdateDeletePerson(GenericAPIView):
             serializer.save()  
 
             response = {
-                "message" : "data updated successfully",
+                "message" : "person updated successfully",
                 "data" : serializer.data 
             }
             return Response(data=response,status=status.HTTP_200_OK)
@@ -63,6 +64,6 @@ class GetUpdateDeletePerson(GenericAPIView):
         data_id = get_object_or_404(Person,id=pk) 
         data_id.delete()
         response = {
-            "message":"data was deleted successfully"
+            "message":"person was deleted successfully"
         }
         return Response(data=response,status=status.HTTP_204_NO_CONTENT)    

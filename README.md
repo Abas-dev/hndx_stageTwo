@@ -9,29 +9,95 @@ The application is built using django and django restframework(drf)
 
 This process will install the necessary libries to run the application.
 
-## Testing the endpoints 
-Below are the end points to perform the basic crud operations: 
 
-```url: https://hndx-stagetwo.onrender.com```
+## API Endpoints
 
-```create: https://hndx-stagetwo.onrender.com/api/create/```
+### 1. Create a Person
 
-This is to create a person. This endpoint will request for the name and save it to the database.
+**Endpoint:** `POST /api/create/`
 
-```get: https://hndx-stagetwo.onrender.com/api/get/```
+**Request:**
+```json
+{
+    "name": "Mark Essien"
+}
+```
 
-This will get all the data in the database
+**Response:**
+```json
+{
+    "id": 1,
+    "name": "Mark Essien"
+}
+```
+### 2. Retrieve all in database
 
-```getById: https://hndx-stagetwo.onrender.com/api/byId/<id>```
+**Endpoint:** `GET /api/`
 
-This will get the data with the provided id 
+**Response:**
+```json
+{
+    "id": 1,
+    "name": "Mark Essien"
+},
+{
+    "id": 1,
+    "name": "Jimmy James"
+},
+{
+    "id": 1,
+    "name": "Top Boy"
+}
+```
 
-```updateById: https://hndx-stagetwo.onrender.com/api/byId/<id>```
+### 3. Retrieve a Person
 
-This will update the data using the provided id 
+**Endpoint:** `GET /api/byId/{user_id}`
 
-```deleteById: https://hndx-stagetwo.onrender.com/api/byId/<id>```
+**Response:**
+```json
+{
+    "id": 1,
+    "name": "Mark Essien"
+}
+```
 
-This endpoint will delete the data using the provided id
+### 4. Update a Person
+
+**Endpoint:** `PUT /api/byId/{user_id}`
+
+**Request:**
+```json
+{
+    "name": "Mark Essien Updated"
+}
+```
+
+**Response:**
+```json
+{
+    "id": 1,
+    "name": "Mark Essien Updated"
+}
+```
+
+### 5. Delete a Person
+
+**Endpoint:** `DELETE /api/byId/{user_id}`
+
+**Response:**
+```json
+{
+    "message": "Person has been deleted"
+}
+```
+
+
+
+## Error Handling
+
+- **400 Bad Request:** If the request is malformed or missing required fields.
+- **404 Not Found:** If the requested `Person` does not exist.
+- **405 Method Not Allowed:** If an unsupported HTTP method is used on an endpoint.
 
 
