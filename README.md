@@ -14,7 +14,7 @@ This process will install the necessary libries to run the application.
 
 ### 1. Create a Person
 
-**Endpoint:** `POST /api/create/`
+**Endpoint:** `POST /api/`
 
 **Request:**
 ```json
@@ -32,7 +32,7 @@ This process will install the necessary libries to run the application.
 ```
 ### 2. Retrieve all in database
 
-**Endpoint:** `GET /api/`
+**Endpoint:** `GET /api/get/`
 
 **Response:**
 ```json
@@ -52,7 +52,7 @@ This process will install the necessary libries to run the application.
 
 ### 3. Retrieve a Person
 
-**Endpoint:** `GET /api/byId/{user_id}`
+**Endpoint:** `GET /api/{user_id}`
 
 **Response:**
 ```json
@@ -64,7 +64,7 @@ This process will install the necessary libries to run the application.
 
 ### 4. Update a Person
 
-**Endpoint:** `PUT /api/byId/{user_id}`
+**Endpoint:** `PUT /api/{user_id}`
 
 **Request:**
 ```json
@@ -83,7 +83,7 @@ This process will install the necessary libries to run the application.
 
 ### 5. Delete a Person
 
-**Endpoint:** `DELETE /api/byId/{user_id}`
+**Endpoint:** `DELETE /api/{user_id}`
 
 **Response:**
 ```json
